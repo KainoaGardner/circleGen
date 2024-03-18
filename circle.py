@@ -68,4 +68,4 @@ class Circlegen:
         self.displayBar()
 
 
-circle = Circlegen(100,"#e74c3c","#3498db")
+circle = Circlegen(TILEAMOUNT,"#e74c3c","#3498db")
