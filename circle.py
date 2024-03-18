@@ -1,9 +1,9 @@
 from setting import *
 import math
 class Circlegen:
-    def __init__(self,tileAmount,boxColor,barColor):
+    def __init__(self,tileAmount,tileSize,boxColor,barColor):
         self.tileAmount = tileAmount
-        self.tileSize = WIDTH // self.tileAmount
+        self.tileSize = tileSize
         self.boxColor = boxColor
         self.barColor = barColor
         self.barSpeed = (360 / self.tileAmount) / 5
@@ -69,4 +69,4 @@ class Circlegen:
         self.displayBar()
 
 
-circle = Circlegen(TILEAMOUNT,"#e74c3c","#3498db")
+circle = Circlegen(TILEAMOUNT,TILESIZE,"#e74c3c","#3498db")
