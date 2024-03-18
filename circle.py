@@ -6,6 +6,7 @@ class Circlegen:
         self.tileSize = WIDTH // self.tileAmount
         self.boxColor = boxColor
         self.barColor = barColor
+        self.barSpeed = (360 / self.tileAmount) / 5
         self.angle = 0
         self.bar = (WIDTH / 2) - self.tileSize / 2
         self.grid = self.createGrid()
@@ -58,7 +59,7 @@ class Circlegen:
     def update(self):
         self.barPoint = self.getBarPoint()
         if self.angle < 360:
-            self.angle += 1
+            self.angle += self.barSpeed
         self.makeCircleBox()
 
     def display(self):
